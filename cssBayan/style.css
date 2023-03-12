@@ -1,0 +1,124 @@
+/*********************RESET**********************/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+/*********************ACCORDION**********************/
+
+.wrapper {
+    max-width: 1920px;
+    min-height: 100vh;
+    padding: 40px;
+    background-image: linear-gradient(to right, #2F80ED, #1CB5E0)
+}
+
+.accordion {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgba(255, 247, 0, 0.8);
+    padding: 1rem;
+}
+
+.accordion-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.accordion-item__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.accordion-item__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid rgba(255, 247, 0, 0.8);
+    border-left: none;
+    border-right: none;
+    color: rgba(255, 247, 0, 0.8);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.accordion-item__content {
+    display: none;
+    border-left: none;
+    border-right: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.picture {
+    max-width: 20rem;
+}
+
+.accordion-item__input:checked ~ .accordion-item__content {
+    display: block;
+}
+
+.accordion-item__input:hover ~ .accordion-item__content {
+    display: block;
+}
+
+.accordion-item__input:hover ~ .accordion-item__trigger {
+    border-bottom: none;
+}
+
+.accordion-item__input:checked ~ .accordion-item__trigger {
+    border-bottom: none;
+}
+
+.accordion-item__input:checked ~ label>.rotate {
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+
+.accordion-item__input:hover ~ label>.rotate {
+    -moz-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+
+.rotate {
+    -moz-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
